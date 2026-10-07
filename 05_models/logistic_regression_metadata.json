@@ -1,0 +1,22 @@
+{
+    "model_name": "fintech_logistic_regression",
+    "version": "1.0.0",
+    "threshold": 0.69,
+    "test_roc_auc": 0.802498904294793,
+    "features": [
+        "age",
+        "job_type",
+        "education_level",
+        "credit_default",
+        "contact_method",
+        "contact_month",
+        "previously_contacted",
+        "previous_campaign_outcome",
+        "euribor_3m_rate",
+        "is_new_campaign_client"
+    ],
+    "target_mapping": {
+        "no": 0,
+        "yes": 1
+    }
+}
