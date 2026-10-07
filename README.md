@@ -7,37 +7,42 @@ desarrollar una solución que combine análisis exploratorio, análisis
 estadístico, visualización de datos y modelización predictiva.
 
 El proyecto cubre el flujo completo de trabajo, desde los datos
-originales hasta la construcción de una aplicación web para realizar
-predicciones sobre nuevos clientes.
+originales hasta la construcción y despliegue de una aplicación web para
+realizar predicciones sobre nuevos clientes.
+
+## Aplicación desplegada
+
+La aplicación está disponible públicamente mediante Streamlit Community Cloud:
+
+**[Acceder a la aplicación Fintech Customer Analytics](https://fintech-customer-analytics.streamlit.app/)**
 
 ## Objetivos
 
 Los principales objetivos del proyecto son:
 
--   Explorar y comprender la información disponible sobre clientes y
-    campañas comerciales.
--   Detectar patrones, relaciones y variables relevantes mediante
-    análisis exploratorio y estadístico.
--   Preparar y transformar los datos para su posterior análisis y
-    modelización.
--   Construir visualizaciones y dashboards que faciliten la
-    interpretación de los resultados.
--   Desarrollar un modelo predictivo para estimar la probabilidad de
-    suscripción de un cliente.
--   Convertir el modelo entrenado en una aplicación sencilla que pueda
-    utilizarse fuera del entorno de desarrollo.
+- Explorar y comprender la información disponible sobre clientes y
+  campañas comerciales.
+- Detectar patrones, relaciones y variables relevantes mediante
+  análisis exploratorio y estadístico.
+- Preparar y transformar los datos para su posterior análisis y
+  modelización.
+- Construir visualizaciones y dashboards que faciliten la
+  interpretación de los resultados.
+- Desarrollar un modelo predictivo para estimar la probabilidad de
+  suscripción de un cliente.
+- Convertir el modelo entrenado en una aplicación sencilla que pueda
+  utilizarse fuera del entorno de desarrollo.
 
 ## Estructura del proyecto
 
-``` text
+```text
 Fintech_TFM/
 ├── 00_data/          # Datos originales y datos procesados
 ├── 01_notebooks/     # EDA, análisis y modelización
 ├── 02_scripts/       # Funciones reutilizables de Python
-├── 03_reports/       # Informes del proyecto
-├── 04_results/       # Resultados y salidas del análisis
-├── 05_docs/          # Documentación adicional
-├── 06_models/        # Modelo entrenado y metadatos
+├── 03_reports/       # Informes y resultados del proyecto
+├── 04_docs/          # Documentación adicional
+├── 05_models/        # Modelo entrenado y metadatos
 ├── app/              # Aplicación Streamlit
 ├── requirements.txt  # Dependencias necesarias
 ├── .gitignore
@@ -124,7 +129,7 @@ encontrar un equilibrio entre precision y recall para la clase positiva.
 
 El threshold seleccionado es aproximadamente:
 
-``` text
+```text
 0.69
 ```
 
@@ -136,7 +141,7 @@ y se utiliza posteriormente durante la inferencia.
 En el conjunto de validación, utilizando inicialmente un threshold de
 0.50, el modelo obtuvo un ROC-AUC aproximado de:
 
-``` text
+```text
 ROC-AUC: 0.777
 ```
 
@@ -147,7 +152,7 @@ durante el ajuste del modelo y del umbral.
 Con un threshold aproximado de 0.69, la matriz de confusión obtenida
 sobre test fue:
 
-``` text
+```text
 TN = 6619
 FP = 513
 FN = 447
@@ -183,8 +188,8 @@ utilización posterior y se guarda con `joblib`.
 
 Los artefactos principales son:
 
-``` text
-06_models/
+```text
+05_models/
 ├── logistic_regression_pipeline.joblib
 └── logistic_regression_metadata.json
 ```
@@ -209,9 +214,14 @@ entrenado, obtiene la probabilidad de suscripción mediante
 De esta forma, el modelo puede utilizarse sin necesidad de ejecutar
 directamente los notebooks ni escribir código Python.
 
+La aplicación se encuentra desplegada en Streamlit Community Cloud y
+puede utilizarse directamente desde el siguiente enlace:
+
+**[Abrir aplicación Fintech Customer Analytics](https://fintech-customer-analytics.streamlit.app/)**
+
 Para ejecutar la aplicación localmente:
 
-``` bash
+```bash
 streamlit run app/app.py
 ```
 
@@ -223,27 +233,27 @@ dependencias.
 Las dependencias principales del proyecto se encuentran en
 `requirements.txt` y pueden instalarse con:
 
-``` bash
+```bash
 pip install -r requirements.txt
 ```
 
 ## Tecnologías utilizadas
 
--   Python
--   Pandas
--   NumPy
--   Matplotlib
--   Seaborn
--   Scikit-learn
--   SciPy
--   Joblib
--   Jupyter Notebook
--   Streamlit
--   Git y GitHub
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- SciPy
+- Joblib
+- Jupyter Notebook
+- Streamlit
+- Git y GitHub
 
 ## Flujo general del proyecto
 
-``` text
+```text
 Datos originales
       |
       v
@@ -268,18 +278,20 @@ Dashboards            Dataset procesado
                            |
                            v
                   Aplicación Streamlit
+                           |
+                           v
+                   Despliegue en Cloud
 ```
 
 ## Estado del proyecto
 
-El análisis, el procesamiento de datos, la modelización y la aplicación
-local se encuentran implementados. El siguiente paso es publicar el
-repositorio y desplegar la aplicación para permitir su acceso mediante
-una URL pública.
+El proyecto se encuentra finalizado y desplegado. Incluye el análisis
+exploratorio y estadístico, el procesamiento de datos, la visualización
+de resultados, la modelización predictiva y una aplicación web
+desarrollada con Streamlit.
 
-## Autor
+La aplicación está desplegada en Streamlit Community Cloud y permite
+realizar predicciones sobre nuevos clientes mediante una interfaz web.
 
-Diego
+**[Acceder a la aplicación](https://fintech-customer-analytics.streamlit.app/)**
 
-Proyecto desarrollado como trabajo de análisis de datos y modelización
-aplicado al sector Fintech.
