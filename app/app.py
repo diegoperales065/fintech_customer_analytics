@@ -30,13 +30,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 MODEL_FILE = (
     BASE_DIR
-    / "06_models"
+    / "05_models"
     / "logistic_regression_pipeline.joblib"
 )
 
 METADATA_FILE = (
     BASE_DIR
-    / "06_models"
+    / "05_models"
     / "logistic_regression_metadata.json"
 )
 
@@ -61,7 +61,7 @@ try:
 except FileNotFoundError as error:
     st.error(
         "No se encuentra el modelo o el fichero de metadatos. "
-        "Comprueba que ambos estén dentro de 03_models/."
+        "Comprueba que ambos estén dentro de 05_models/."
     )
     st.exception(error)
     st.stop()
